@@ -131,11 +131,6 @@ export default function HomePage() {
       <div className="card">
         <div className="section-title">1. Upload Gambar</div>
         <ImageUploader onFilesSelected={handleFilesSelected} />
-        {isProcessing && (
-          <p className="empty-state">
-            <span className="loader" /> Memproses gambar...
-          </p>
-        )}
         <ImagePreview images={images} onRemove={handleRemove} />
       </div>
 
@@ -160,6 +155,12 @@ export default function HomePage() {
           isExporting={isExporting}
         />
       </div>
+
+      {isProcessing && (
+        <div className="processing-badge">
+          <span className="loader" /> Memproses gambar...
+        </div>
+      )}
     </main>
   );
 }

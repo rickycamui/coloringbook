@@ -227,3 +227,19 @@ input[type='range'] {
   text-align: center;
   padding: 20px 0;
 }
+
+.processing-badge {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-size: 0.85rem;
+  color: var(--text);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  z-index: 50;
+}
